@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: #f0f0f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.autor {
+    margin-top: 4px;
+    color: #a0a0c0;
+    font-size: 0.95rem;
+}
+
+.painel-pontuacao {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.card-pontuacao {
+    flex: 1;
+    background: #1e1e30;
+    border: 1px solid #2e2e45;
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-pontuacao .label {
+    font-size: 0.75rem;
+    color: #9090b0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-pontuacao span:last-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4ade80;
+}
+
+.area-jogo {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    background: #10101c;
+    border: 2px solid #2e2e45;
+    border-radius: 14px;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 20, 0.9);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.overlay.escondido {
+    display: none;
+}
+
+.overlay h2 {
+    font-size: 1.5rem;
+}
+
+.overlay p {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+
+.botao {
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    color: #0f0f1a;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 222, 128, 0.35);
+}
+
+.botao:active {
+    transform: translateY(0);
+}
+
+.controles-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.linha-controle {
+    display: flex;
+    gap: 8px;
+}
+
+.botao-direcao {
+    width: 52px;
+    height: 52px;
+    background: #1e1e30;
+    border: 1px solid #2e2e45;
+    border-radius: 12px;
+    color: #f0f0f5;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.botao-direcao:hover {
+    background: #2a2a42;
+}
+
+.botao-direcao:active {
+    background: #4ade80;
+    color: #0f0f1a;
+}
+
+footer {
+    text-align: center;
+    color: #6a6a8a;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+@media (min-width: 600px) {
+    .controles-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+}

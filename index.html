@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Jogo da Cobrinha</h1>
+            <p class="autor">Desenvolvido por Tiago Souza</p>
+        </header>
+
+        <div class="painel-pontuacao">
+            <div class="card-pontuacao">
+                <span class="label">Pontuação</span>
+                <span id="pontuacao">0</span>
+            </div>
+            <div class="card-pontuacao">
+                <span class="label">Melhor Pontuação</span>
+                <span id="melhorPontuacao">0</span>
+            </div>
+        </div>
+
+        <div class="area-jogo">
+            <canvas id="canvasJogo" width="400" height="400"></canvas>
+
+            <div id="telaInicial" class="overlay">
+                <h2>Pronto para jogar?</h2>
+                <p>Use as setas ou W, A, S, D para mover</p>
+                <button id="btnIniciar" class="botao">Iniciar Jogo</button>
+            </div>
+
+            <div id="telaGameOver" class="overlay escondido">
+                <h2>Game Over!</h2>
+                <p>Sua pontuação: <span id="pontuacaoFinal">0</span></p>
+                <button id="btnReiniciar" class="botao">Reiniciar</button>
+            </div>
+        </div>
+
+        <div class="controles-mobile">
+            <div class="linha-controle">
+                <button id="btnCima" class="botao-direcao">↑</button>
+            </div>
+            <div class="linha-controle">
+                <button id="btnEsquerda" class="botao-direcao">←</button>
+                <button id="btnBaixo" class="botao-direcao">↓</button>
+                <button id="btnDireita" class="botao-direcao">→</button>
+            </div>
+        </div>
+        <footer>
+            <p>Atividade acadêmica — Deploy com GitHub e Vercel</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
